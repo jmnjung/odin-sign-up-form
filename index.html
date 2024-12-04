@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Sign-up Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="image-sidebar">
+      <img src="./assets/images/kobe-6-grinch.jpg" alt="Kobe 6 Grinch Shoes">
+      <div class="credits">
+        Photo by <a href="https://www.pexels.com/@perfect-lens/">Terrance Barksdale</a>
+        on <a href="https://www.pexels.com/photo/green-nike-shoes-6481840/">Pexels</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="introduction">
+        <div>
+          This is not a real online service!
+          You know you need shoes like these to express yourself on the basketball court.
+        </div>
+        <div>Sign up <em>now</em> to get started.</div>
+        <div>You <em>know</em> you want to.</div>
+      </div>
+
+      <form>
+        <div class="form-content">
+          <div class="form-header">Let's do this!</div>
+
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+          </div>
+        </div>
+
+        <button type="submit">Create Account</button>
+      </form>
+
+      <div class="log-in">
+        <div>Already have an account?</div>
+        <a href="#">Log In</a>
+      </div>
+    </div>
+  </body>
+</html>
