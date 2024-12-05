@@ -1,4 +1,32 @@
+@font-face {
+  font-family: Lato;
+  src: url("./assets/fonts/lato-bold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/lato-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("./assets/fonts/lato-light-webfont.woff2") format("woff2"),
+    url("./assets/fonts/lato-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("./assets/fonts/lato-regular-webfont.woff2") format("woff2"),
+    url("./assets/fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
+  font-family: Lato, sans-serif;
   height: 100vh;
   margin: 0;
   overflow: hidden;
@@ -12,6 +40,10 @@ img {
   object-fit: cover;
 }
 
+em {
+  margin-right: 0.15em;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -19,19 +51,32 @@ form {
 }
 
 label {
+  color: #4a4a4a;
+  font-size: 11px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 input {
   border: 1px solid #e5e7eb;
   border-radius: 4px;
+  font-family: Lato, sans-serif;
   outline: none;
   padding: 8px;
 }
 
-input#password:invalid,
-input#confirm-password:invalid {
+input:valid {
+  border-color: #34d399;
+}
+
+input:invalid {
   border-color: #dc2626;
+}
+
+input#password:focus:invalid,
+input#confirm-password:focus:invalid {
+  border-color: #dc2626;
+  box-shadow: 0 0 4px rgba(220, 38, 38, 0.5);
 }
 
 input:focus {
@@ -47,8 +92,15 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: white;
   cursor: pointer;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
   margin-left: 36px;
-  padding: 16px 64px;
+  padding: 16px 48px;
+}
+
+button:hover {
+  background-color: #4d7a3a;
 }
 
 .image-sidebar {
@@ -59,6 +111,8 @@ button {
 .credits,
 .credits > a {
   color: white;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .credits {
@@ -77,6 +131,8 @@ button {
 }
 
 .introduction {
+  font-size: 21px;
+  font-weight: 700;
   margin-bottom: 48px;
   padding: 0px 36px;
 }
@@ -86,6 +142,8 @@ button {
 }
 
 .form-header {
+  font-size: 21px;
+  font-weight: 700;
   margin-bottom: 8px;
   flex: 1 1 100%;
 }
@@ -103,7 +161,7 @@ button {
   width: 30%;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .log-in {
@@ -115,5 +173,6 @@ button {
 
 .log-in > a {
   color: #5a8f4f;
+  font-weight: 700;
   text-decoration: none;
 }
